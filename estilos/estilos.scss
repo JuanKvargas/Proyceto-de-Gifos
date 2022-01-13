@@ -1,0 +1,33 @@
+@import "genericos/variables";
+@import "genericos/mixins";
+
+@import "genericos/header";
+@import "genericos/footer";
+@import "genericos/slider";
+
+@import "home/main";
+@import "favoritos/favoritos";
+@import "creargifo/creargifo";
+@import "misgifos/misgifos";
+//@import "crearalterno/alterno";
+
+@import "nocturno/headerNocturno";
+@import "nocturno/footerNocturno";
+@import "nocturno/misGifosNoche";
+@import "nocturno/favoritosNoche";
+@import "nocturno/homeNoche";
+@import "nocturno/sliderNoche";
+@import "nocturno/crearGifoNoche";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    padding-top: 95px;
+    //max-width: 100vh;
+}
+
+

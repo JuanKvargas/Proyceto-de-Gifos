@@ -1,0 +1,393 @@
+//Crear Giffo
+
+.contLeyenda{
+    padding-top: 50px;
+    padding-bottom: 200px;
+
+    .leyendaCrearMobile{
+        @include titulos;   
+        font-size: 20px;
+        line-height: 25px;
+        padding: 0 25px;
+
+        .colorGIFOS{
+            color: $color-GIFOS;
+        }
+    }
+}
+.crearGiffoMobile{
+    display: none;
+}
+
+.crearGIFFO{
+    text-align: center;
+
+    .pantallaPrincipal{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 156px;
+        margin-right: 167.4px;
+
+        .contCamara{
+            height: 390px;
+            width: 220px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .imagenCamara{
+                width: 123px;
+            }
+
+            .accesorioCamara{
+                width: 91px;
+                padding-top: 5.5px;
+                padding-left: 2px;
+            }
+        }
+
+        .pantallaCentral{
+            .pantallaGrabacion{
+                width: 688px;
+                height: 390px;
+                border: 1px solid $color-violeta;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .esqSupIzq {
+                    border-top: 1px solid $color-GIFOS;
+                    border-left: 1px solid $color-GIFOS;
+                    width: 25px;
+                    height: 27px;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                }
+                
+                .esqSupDer {
+                    border-top: 1px solid $color-GIFOS;
+                    border-right: 1px solid $color-GIFOS;
+                    width: 25px;
+                    height: 27px;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+
+                .esqInfIzq {
+                    border-bottom: 1px solid $color-GIFOS;
+                    border-left: 1px solid $color-GIFOS;
+                    width: 25px;
+                    height: 27px;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                }
+                
+                .esqInfDer {
+                    border-bottom: 1px solid $color-GIFOS;
+                    border-right: 1px solid $color-GIFOS;
+                    width: 25px;
+                    height: 27px;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                }
+
+                .grabacion{
+                    width: 480px;
+                    height: 320px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    .tituloRecord{
+                        @include titulos;
+                        font-size: 25px;
+                        line-height: 35px;
+                        margin: 0 0 3px 0;
+
+                        .colorGIFFOS {
+                            color: $color-GIFOS;
+                        }
+                    }
+
+                    .textRecord{
+                        font-family: $fuente-roboto;
+                        font-weight: bold;
+                        font-size: 16px;
+                        text-align: center;
+                        color: $color-negro;
+                        line-height: 29px;
+                        margin: 0;
+                    }
+
+                    .cubierta{
+                        display: none; 
+                        width: 100%;
+                        height: 100%;
+                        background-color: $violeta-hover-giff;
+                        text-align: center;
+                        position: absolute;
+                        z-index: 5;
+
+                        .cubiertaDinamica{
+                            display: none;
+                            position: absolute;
+                            top: 11px;
+                            right: 12px;
+
+                            #btnDownGiff {
+                                position: absolute;
+                                top: 0;
+                                right: 43px;
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 6px;
+                                border: none;
+                                background-color: $color-blanco-down;
+                                margin: 0;
+                                cursor: pointer;
+                            }
+                            :hover{
+                                background: $color-blanco;
+                            }
+
+                            #btnLink{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 6px;
+                                border: none;
+                                background-color: $color-blanco-down;
+                                margin: 0;
+                                cursor: pointer;
+                            }
+                            :hover{
+                                background-color: $color-blanco;
+                            }
+                        }
+
+                        .infoCubierta{
+                            display: flex;
+                            flex-direction: column;
+
+                            .iconoCubierta{
+                                margin-left: 50%;
+                                width: 22px;
+                                height: 22px;
+                            }
+
+                            .textoCubierta{
+                                font-family: $fuente-montserrat;
+                                font-weight: bold;
+                                font-size: 15px;
+                                line-height: 19px;
+                                color: $color-blanco;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+
+                    #grabar{
+                        display: none;
+                        position: absolute;
+                        z-index: 1;
+                    }
+
+                    #gifoListo{
+                        display: none;
+                        width: 480px;
+                        height: 320px;
+                        position: absolute;
+                        z-index: 2;
+                    }
+                }
+            }
+
+            .contPasosYContador{
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                .pasos{
+                    display: flex;
+                    align-items: center;
+
+                    .paso{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        border: 1px solid $color-violeta;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 25px;
+
+                        font-family: $fuente-roboto;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: $color-violeta;
+                    }
+
+                    .paso-activo{
+                        background-color: $color-violeta;
+                        color: $color-blanco;
+                    }
+
+                    .paso:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .contador{
+                    position: absolute;
+                    right: 0;
+
+                    .temporizador{
+                        display: none;
+                        @include titulos;
+                        font-size: 15px;
+                        line-height: 22px;
+                        color: $color-violeta;
+                    }
+
+                    .repetirCaptura{
+                        display: none;
+                        @include titulos;
+                        font-size: 13px;
+                        line-height: 16px;
+                        background-color: unset;
+                        border: none;
+                        border-bottom: 2px solid $color-blanco;
+                        cursor: pointer;
+                    }
+                    :hover{
+                        border-bottom: 2px solid $color-GIFOS;
+                    }
+                }
+            }
+        }
+
+        .carrete{
+            width: 220px;
+            height: 465px;
+            position: relative;
+
+            .imagenCarrete{
+                width: 142px;
+                position: absolute;
+                bottom: 0;
+                left: 67px;
+            }
+        }
+    }
+
+    .lineaAzul{
+        height: 6.9px;
+        width: 55%;
+        border-radius: 50px;
+        background-color: $color-violeta;
+        margin: 0 auto 20.1px;
+    }
+
+    .contBotones{
+        text-align: center;
+
+        #btnComenzar{
+            margin: 0 auto 26px;
+        }
+
+        #btnGrabar{
+            display: none;
+            margin: 0 auto 26px;
+        }
+
+        #btnFinalizar{
+            display: none;
+            margin: 0 auto 26px;
+        }
+
+        #btnSubirGif{
+            display: none;
+            margin: 0 auto 26px;
+        }
+        .btnVerMasCrear{
+            display: none
+        }
+    }
+}
+.boton{
+    @include botones;
+}
+.boton:hover{
+    color: $color-blanco;
+    background: $color-violeta;
+}
+@media screen and (max-width: 1200px){ 
+    .crearGIFFO{
+        .pantallaPrincipal{
+            margin: 4px 50px 0px 50px;
+            justify-content: center;
+    
+            .contCamara{
+                width: 162px;
+    
+                .imagenCamara{
+                    width: 90px;
+                }
+    
+                .accesorioCamara{
+                    width: 60px;
+                    padding-top: 5px;
+                    padding-left: 3px;
+                }
+            }
+    
+            .pantallaCentral{
+                .pantallaGrabacion{
+                    width: 600px;
+                }
+            }
+    
+            .carrete{
+                width: 162px;
+    
+                .imagenCarrete{
+                    width: 100px;
+                }
+            }  
+        }
+        .lineaAzul{
+            width: 650px;
+        }
+    }     
+}
+
+@media screen and (max-width: 900px){
+    .crearGIFFO{
+        .pantallaPrincipal{
+            display: none;
+        }
+        .crearGiffoMobile{
+            display: block;
+        }
+        .contLineaAzul{
+            display: none;
+        }
+        .contBotones{
+            display: none;
+        }
+    }   
+}

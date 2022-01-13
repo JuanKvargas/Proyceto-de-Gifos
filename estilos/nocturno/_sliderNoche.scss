@@ -1,0 +1,34 @@
+////// Slider Modo Nocturno/////
+.modoNoche{
+    .carousel{
+        background-color: $background-slider-noche;
+    }
+    .trendGif{
+        color: $color-blanco;
+    }
+    .mira{
+        color: $color-blanco;
+        font-weight: 200;
+    }
+    .pasarelaMax{  
+        background: $negro-modal;
+    }
+    .userGifoTrendMax{
+        color: $color-blanco;
+    }
+    .titleGifoTrendMax{ 
+        color: $color-blanco;
+    }
+
+    @media screen and (max-width: 900px){
+        .pasarelaMaxMobile{
+            background: $negro-modal;
+        }
+        .userGifoTrendMaxMobile{
+            color: $color-blanco;
+        }
+        .titleGifoTrendMaxMobile{
+            color: $color-blanco;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+@mixin titulos {
+    font-family: $fuente-montserrat;
+    font-weight: bold;
+    text-align: center;
+    color: $color-violeta;
+}
+
+@mixin botones {
+    color: $color-violeta;
+    background-color: unset;
+    border: 1px solid $color-violeta;
+    font-weight: bold;
+    border-radius: 25px;
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 23.5px;
+    padding-right: 22.5px;
+    font-family: $fuente-montserrat;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+}

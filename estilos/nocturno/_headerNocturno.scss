@@ -1,0 +1,23 @@
+/////Colores en el header nocturno/////
+.modoNoche{
+    background-color: $header-noche;
+    
+    header{
+        border-top: 5px solid $color-negro;
+    }
+    .nav{
+        background-color: $header-noche;
+    }
+    .nav-a{
+        color: $color-blanco;
+    }
+}
+
+//Pantalla mobile
+@media screen and (max-width: 900px){
+    .modoNoche{
+        .nav-menu{
+            background-color: $color-negro;
+        }
+    }
+}

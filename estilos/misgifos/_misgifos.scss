@@ -1,0 +1,372 @@
+//Estilos main mis gifos
+
+.misGifosInicio{
+    margin-top: 10px;
+    text-align: center;
+}
+.caraMisGifos{
+    width: 24px;
+    height: 22px;
+}
+.misGifos{
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 8px;
+    color: $color-violeta;
+    font-family: $fuente-montserrat;
+    font-weight: bold;
+}
+.misGifosVacio{
+    text-align: center;
+    margin-top: 111px;
+    display: none; 
+}
+.imgMisGifosVacio{
+    width: 150px;
+    height: 150px;
+}
+.tituloMisGifosVacio{
+    font-family: $fuente-montserrat;
+    font-weight: bold;
+    font-size: 22px;
+    color: $color-GIFOS;
+    line-height: 25px;
+    margin-top: 40px;
+}
+.contenedorBusquedaMisGifos{
+    text-align: center;
+}
+.contGridMisGifos{
+    margin: 36px 141.5px 43px 141.5px; //36px del titulo a la primer imagen 141.5 a los lados 43 abajo
+    display: flex;                    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.miniContMisGif {  
+    position: relative;
+    width: 260px;
+    height: 200px;
+    cursor: pointer;
+    margin: 0 14.5px 35px 14.5px; //arriba cero, 14.5 y 14.5 a los lados 35 abajo
+    //nota los margenes de 14.5px y 14.5 de cada imagen a los lados da 29, y los 43 del contenedor
+    // y los 35 de cada imagen abajo da 78 que es la distancia al boton ver mas
+}
+.miniContMisGif:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $violeta-hover-giff;
+}
+.miniContMisGifMax{
+    position: fixed;
+    z-index: 1;  
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: $background-modal;
+}
+.imgMisGif{ 
+    width: 100%;
+    height: 100%;
+}
+.imgMisGifMax{
+    position: absolute;                
+    top: 160px;
+    left: 25%;
+    width: 48.2639%;
+    height: 385px;
+    overflow-y: auto;
+}
+.closeMisGif{  
+    display: none; 
+}
+.closeMisGifMax{
+    position: fixed;
+    top: 66.4px;
+    left: 80%;
+} 
+.contIconsMisGif{ 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    transform: translateX(-10000%);
+}
+.showIconsMisGif{
+    transform: translateX(0%);
+}
+.contIconsMisGifMax{
+    display: flex;
+    position: absolute;
+    left: 66.18%;               
+    top: 567px;
+}
+.contInfoMisGif{ 
+    position: absolute;
+    top: 132px;                 
+    left: 12px;
+    display: none;
+}
+.contInfoMisGifMax{
+    position: absolute;
+    top: 567px;
+    left: 24.6875%;
+}
+.botonEliminar{
+    margin: 5px;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonEliminar:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.botonEliminarMax{
+    margin: 5px;
+    border-radius: 6px;
+    width: 33px;
+    height: 34px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonEliminarMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.downMisGif{ 
+    margin: 5px;
+    border-radius: 6px;
+}
+.downMisGif:hover{
+    background: $color-blanco;
+}
+.downMisGifMax{
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+}
+.downMisGifMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.maxMisGif{
+    margin: 5px;
+    border-radius: 6px;
+}
+.maxMisGif:hover{
+    background: $color-blanco;
+}
+.maxMisGifMax{
+    display: none;        
+}
+.userMisGif{
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-blanco;
+    text-align: left; 
+}
+.userMisGifMax{
+    text-align: left;
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-negro;
+}
+.tituloGifoMisGif{ 
+    font-family: $fuente-roboto;
+    font-weight: bold;                  
+    font-size: 16px;
+    color: $color-blanco;
+    text-align: left;
+}
+.tituloGifoMisGifMax{
+    font-size: 16px;
+    color: $color-negro;                 
+    text-align: center;
+    font-family: $fuente-roboto;
+}
+.btnVerMasGif{
+    cursor: pointer;
+    display: none;
+    margin-left: 46%;
+}
+.closeMisGifMobile{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    .contenedorBusquedaMisGifos{
+        margin-top: 45px;  
+    
+    } 
+    .contenedorBusquedaMisGifos::before {
+        left: calc(50% - 123px); 
+        width: 247px;        
+    }
+    .contGridMisGifos {
+        margin: 48.5px 6.313% 50px 6.313%; 
+    }
+    .miniContMisGif {  
+        width: 208px;
+        height: 160px;
+    }
+    .imgMisGifMax{
+        left: 16%;
+        width: 66%;
+        height: 385px;
+    }
+    .contIconsMisGif{
+        top: 6px;
+        right: 6px;
+    }
+    .contIconsMisGifMax{
+        left: 72.18%;               
+        top: 567px;
+    }
+    .contInfoMisGif{
+        top: 102px;                 
+        left: 6px;
+    }
+    .contInfoMisGifMax{
+        left: 16%;
+    }
+    .userMisGif{
+        font-size: 14px;
+    }
+    .tituloGifoMisGif{              
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .misGifosInicio{
+        margin-top: 5px;
+    }
+    .caraMisGifos{
+        width: 23px;
+        height: 21px;
+    }
+    .misGifos{
+        font-size: 20px;
+        margin-top: 6px;
+    }
+    .misGifosVacio{
+        margin-top: 76px;
+    }
+    .imgMisGifosVacio{
+        width: 103px;
+        height: 104px;
+    }
+    .tituloMisGifosVacio{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .contGridMisGifos {
+        margin: 38px 10.5px 53px 10.5px;
+    }
+    .miniContMisGif {  
+        width: 156px;
+        height: 120px;
+        margin: 0 10.5px 25px 10.5px;
+    }
+    .miniContMisGif:hover::before{
+        opacity: 0;
+    }
+    .miniContMisGifMaxMobile{ 
+        position: fixed;
+        z-index: 1;  
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        background: $background-modal;
+    }
+    .imgMisGifMaxMobile{ 
+        position: relative;                
+        top: 160px;
+        left: 0px;
+        width: 84.8%;
+        height: 345px;
+    }
+    .contIconsMisGif{ 
+        display: none;
+    }
+    .contIconsMisGifMaxMobile{ 
+        display: block;
+        position: fixed;
+        left: 82%;               
+        top: 515px;
+        width: 90px;
+        display: flex;
+    }
+    .contInfoMisGifMaxMobile{
+        position: fixed;
+        top: 515px;
+        left: 9%;
+    }
+    .userMisGif{
+        font-size: 0px;
+    }
+    .tituloGifoMisGif{              
+        font-size: 0px;
+    }
+    .userMisGifMaxMobile{
+        font-family: $fuente-roboto; 
+        font-size: 15px;
+        line-height: 18px;
+        color: $color-negro;
+    }
+    .tituloGifoMisGifMaxMobile{ 
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-negro;                 
+        text-align: center;
+        font-family: $fuente-roboto;
+    }
+    .downMisGifMaxMobile{  
+    margin: 5px;
+    border-radius: 6px; 
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+    }
+    .botonEliminarMaxMobile{
+        margin: 5px;
+        border-radius: 6px;
+        width: 33px;
+        height: 34px;
+        background: $color-blanco;
+        opacity: 0.7;
+        border: 1px solid $color-sugerencia;
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .maxMisGifMobile{ 
+        display: none;        
+    }
+    .closeMisGifMobileMax{  
+        position: fixed;
+        top: 64px;
+        left: 87.84%;
+        display: block;
+    }
+}

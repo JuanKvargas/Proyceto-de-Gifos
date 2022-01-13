@@ -1,0 +1,10 @@
+////// Estilos al footer nocturno/////
+.modoNoche{
+    .footer{
+        background-color: $header-noche;
+        border-bottom: 5px solid $color-negro;
+    }
+    .compartir, .derechos{
+        color: $color-blanco;
+    }
+}

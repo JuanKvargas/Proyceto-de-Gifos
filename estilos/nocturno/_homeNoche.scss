@@ -1,0 +1,91 @@
+/////Estilos al home nocturno/////
+.modoNoche{
+    .searchSection{
+        .contTitulo{
+    
+            .inspirate{
+                color: $color-blanco;
+            }
+        }
+    
+        .contBusqueda{
+    
+            .busqueda{
+                border: 1px solid $color-blanco;
+    
+                .divContInput{
+    
+                    .barraConLupa{
+    
+                        .barraBusqueda{
+                            color: $color-blanco;
+                        }
+                    }
+    
+                }
+    
+            }
+        }
+    }
+    //Abre la barra de búsqueda para mostrar sugerencias
+    .busquedaAbierta{
+        border: 1px solid $color-blanco;
+    
+        .divContInput{
+    
+            .barraConLupa{
+    
+                .barraBusqueda{
+                    color: $color-blanco;
+                    background-color: unset;
+                }
+            }
+        }
+    
+        .searchSuggests{
+            border-top: 1px solid $color-blanco;
+        }
+    }
+    //Seccion trending sugeridos
+    #seccionDosTrendings{
+    
+        .tituloTrending{
+            color: $color-blanco;
+        }
+    
+        .containerTrends{
+    
+            .topicoCreado{
+                color: $color-blanco;
+            }
+        }
+    }
+    //Seccion de las imagenes
+    .contenedorBusqueda::before {        
+        border-bottom: 1px solid $color-violeta;
+    }
+    .tituloDinámico {
+        color: $color-blanco; 
+    }
+    .miniContMax{
+        background: $negro-modal;
+    }
+    .userMax{
+        color: $color-blanco;
+    }
+    .tituloGifoMax{ 
+        color: $color-blanco;                 
+    }
+
+    @media screen and (max-width: 900px){
+        .miniContMaxMobile{ 
+            background: $negro-modal;
+        }
+        .userMaxMobile{
+            color: $color-blanco;
+        }
+        .tituloGifoMaxMobile{
+            color: $color-blanco;                 
+        }
+    }
+}

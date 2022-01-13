@@ -1,0 +1,744 @@
+///////////////////////// Estilos al main  ////////////////////
+
+.searchSection{
+    .contTitulo{
+        display: flex;
+        justify-content: center; 
+
+        .inspirate{
+            @include titulos;
+            font-size: 35px;
+            line-height: 50px;
+            margin: 76px 253px 24px 253px; 
+
+            .gifos{
+                color: $color-GIFOS;
+            }
+        }
+    }
+
+    .contBusqueda{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+
+        .imagenInicio{
+            width: 399px;
+            height: 190px;
+        }
+
+        .busqueda{
+            border: 1px solid $color-violeta;
+            border-radius: 27px;
+            width: 551px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+
+            .divContInput{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 20px;
+
+                .barraConLupa{
+                    display: flex;
+
+                    .lupaSearch{
+                        padding-top: 2px;
+                        width: 20px;
+                        cursor: pointer;
+                        opacity: 0;
+                    }
+
+                    .barraBusqueda{
+                        margin-left: 13px; 
+                        border: none;
+                        font-family: $fuente-roboto;
+                        color: $color-sugerencia;
+                        font-size: 16px;
+                        text-align: left;
+                        line-height: 19px;
+                        font-weight: 400;
+                        background-color: unset;
+                        outline: 0;
+                        text-transform: capitalize;
+                    }
+                }
+
+                .lupa-close{
+                    background-color: unset;
+                    border: none;
+
+                    .lupaFija{
+                        padding-top: 3px;
+                        width: 20px; 
+                    }
+
+                    .closeSearch{
+                        display: none;
+                    }
+                }
+            }
+
+            .searchSuggests{
+                display: none;
+            }
+        }
+    }
+}
+//Abre la barra de búsqueda para mostrar sugerencias
+.busquedaAbierta{
+    border: 1px solid $color-violeta;
+    border-radius: 27px;
+    width: 551px;
+    height: 200px;
+
+    .divContInput{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px; 
+
+        .barraConLupa{
+            display: flex;
+
+            .lupaSearch{
+                padding-top: 2px;
+                width: 20px;
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            .barraBusqueda{
+                margin-left: 15px;
+                border: none;
+                font-family: $fuente-roboto;
+                color: $color-negro;
+                font-size: 16px;
+                text-align: left;
+                line-height: 19px;
+                font-weight: 400;
+                outline: 0;
+            }
+        }
+
+        .lupa-close{
+            background-color: unset;
+            border: none;
+
+            .lupaFija{
+                display: none;
+            }
+
+            .closeSearch{
+                width: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .searchSuggests{
+        display: block;
+        margin: 0 18px;
+        border-top: 1px solid grey;
+
+        .sugerencia{
+            display: flex;
+            padding-top: 14px;   
+
+            .lupaSugerencias{   
+                width: 15.8px;
+            }
+
+            .textoSugerencia{   
+                margin-left: 20px;
+                border: none;
+                font-family: $fuente-roboto;
+                color: $color-sugerencia;
+                font-size: 16px;
+                text-align: left;
+                line-height: 19px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+        }
+    }
+}
+//estilos del parrafo trending topics
+//las 5 trenings que se traen desde la API
+#seccionDosTrendings{
+    margin-top: 73px;
+    text-align: center;
+
+    .tituloTrending{
+        @include titulos;
+        font-size: 18px;
+        line-height: 25px;
+        height: 50px;
+    }
+
+    .containerTrends{
+        margin-top: 7px;
+
+        .topicoCreado{
+            cursor: pointer;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-family: $fuente-montserrat;
+            font-size: 16px;
+            font-weight: 200;
+            color: $color-violeta;
+            line-height: 25px;
+        }
+    }
+}
+//Parte donde se agregan los Giffs creados con JS
+.contenedorBusqueda{
+    //la seccion entera con titulo la raya azul y las imágenes
+    display: none;
+    position: relative;
+    margin-top: 55px;   //distancia de los topicos a la raya azul
+    text-align: center;
+} 
+.contenedorBusqueda::before {
+    content: "";
+    position: absolute; 
+    z-index: 0;
+    top: 1;
+    left: calc(50% - 169px); 
+    width: 338px;         
+    border-bottom: 1px solid $color-sugerencia;
+    opacity: 0.5;
+}
+.tituloDinámico {
+    position: relative;
+    padding-top: 81.9px;  
+    @include titulos;
+    font-size: 35px;
+    line-height: 30px;
+    text-transform: capitalize; 
+}
+.cont-grid {
+    margin: 59px 9.8264% 50px 9.8264%; //59px del titulo a la primer imagen 141.5 a los lados 50 abajo
+    display: flex;                    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.miniCont {   
+    position: relative;
+    width: 260px;
+    height: 200px;
+    cursor: pointer;
+    margin: 0 1% 28px 1%; //arriba cero, 10 y 10 a los lados 25 abajo
+    //nota los margenes de 10px y 10 de cada imagen a los lados da 20, y los 53 del contenedor
+    // y los 25 de cada imagen abajo da 78 que es la distancia al boton ver mas
+}
+.miniCont:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $violeta-hover-giff;
+}
+.miniContMax{
+    position: fixed;
+    z-index: 1;  
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: $background-modal;
+} 
+.img{
+    width: 100%;
+    height: 100%;
+}
+.imgMax{
+    position: absolute;                
+    top: 160px;
+    left: 25%;
+    width: 48.2639%;
+    height: 385px;
+    overflow-y: auto;
+}
+.contIcons{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+    transform: translateX(-10000%);
+}
+.contIconsMax{
+    position: absolute;
+    display: flex;
+    left: 66.18%;               
+    top: 567px;
+}
+.showIcons{
+    transform: translateX(0%);
+}
+.contInfo{
+    position: absolute;
+    top: 132px;                 
+    left: 12px;
+    display: none;
+}
+.contInfoMax{
+    position: absolute;
+    top: 567px;
+    left: 24.6875%;
+}
+.user{
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-blanco;
+    text-align: left; 
+}
+.userMax{
+    text-align: left;
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-negro;
+}
+.tituloGifo{
+    font-family: $fuente-roboto;
+    font-weight: bold;                  
+    font-size: 16px;
+    color: $color-blanco;
+    text-align: left;
+}
+.tituloGifoMax{ 
+    font-size: 16px;
+    color: $color-negro;                 
+    text-align: center;
+    font-family: $fuente-roboto;
+}
+.botonContFav{
+    margin: 5px;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonContFav:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.botonContFavMax{
+    margin: 5px;
+    border-radius: 6px;
+    width: 33px;
+    height: 34px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonContFavMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.down{
+    margin: 5px;
+    border-radius: 6px;
+}
+.down:hover{
+    background: $color-blanco;
+}
+.downMax{
+    margin: 5px;
+    border-radius: 6px; 
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+}
+.downMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.max{
+    margin: 5px;
+    border-radius: 6px;
+}
+.maxMax{
+    display: none;        
+}
+.max:hover{
+    background: $color-blanco;
+}
+.close{
+    display: none;
+}
+.closeMax{
+    position: fixed;
+    top: 66.4px;
+    left: 80%;
+}
+.closeMobile{
+    display: none;
+}
+.btnVerMas { 
+    cursor: pointer;
+}
+.divContError {    
+    margin-top: 109px;
+}
+.imgError {   
+    width: 150px;
+    text-align: center;
+}
+.textoError {
+    @include titulos;
+    color: $color-GIFOS;
+    font-size: 22px;   
+    line-height: 25px;
+    margin-top: 29px;
+}
+
+@media screen and (max-width: 1200px){
+    .searchSection{
+        .contTitulo{
+    
+            .inspirate{
+                font-size: 30px;
+                line-height: 40px;
+                margin: 35px 153px 27px 153px; 
+            }
+        }
+    
+        .contBusqueda{
+            .imagenInicio{
+                width: 336px;
+                height: 130px;
+            }
+        }
+    }
+
+    #seccionDosTrendings{
+        margin-top: 51px; 
+    
+        .tituloTrending{
+            font-size: 17px;
+        }
+    
+        .containerTrends{
+            margin-top: 5px;
+    
+            .topicoCreado{
+                font-size: 15px;
+            }
+        }
+    }
+    .contenedorBusqueda{
+        margin-top: 45px;  
+    
+    } 
+    .contenedorBusqueda::before {
+        left: calc(50% - 123px); 
+        width: 247px;        
+    }
+    .tituloDinámico {
+        padding-top: 62.45px;  
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .cont-grid {
+        margin: 48.5px 6.313% 50px 6.313%; 
+    }
+    .miniCont {  
+        width: 208px;
+        height: 160px;
+    }
+    .imgMax{
+        left: 16%;
+        width: 66%;
+        height: 385px;
+    }
+    .contIcons{
+        top: 6px;
+        right: 6px;
+    }
+    .contIconsMax{
+        left: 72.18%;               
+        top: 567px;
+    }
+    .contInfo{
+        top: 102px;                 
+        left: 6px;
+    }
+    .contInfoMax{
+        left: 16%;
+    }
+    .user{
+        font-size: 14px;
+    }
+    .tituloGifo{              
+        font-size: 14px;
+    }
+    .divContError {           
+        margin-top: 50px;
+    }
+    .imgError {                     
+        width: 120px;
+        text-align: center;
+    }
+    .textoError {
+        font-size: 20px;    
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .searchSection{
+        .contTitulo{
+    
+            .inspirate{
+                font-size: 25px;
+                line-height: 33px;
+                margin: 7px 45px 31px 45px; 
+            }
+        }
+    
+        .contBusqueda{
+            .imagenInicio{
+                width: 273px;
+                height: 130px;
+            }
+    
+            .busqueda{
+                width: 334px;
+            }
+        }
+
+        #seccionDosTrendings{
+            margin-top: 31px; 
+        
+            .tituloTrending{
+                font-size: 16px;
+            }
+        
+            .containerTrends{
+                margin-top: 2px;
+        
+                .topicoCreado{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    //Abre la barra de búsqueda para mostrar sugerencias
+    .busquedaAbierta{
+        width: 334px;
+    }
+    .contenedorBusqueda{
+        margin-top: 35px;
+    } 
+    .contenedorBusqueda::before {
+        left: calc(50% - 78.5px); 
+        width: 157px;          
+    }
+    .tituloDinámico {
+        padding-top: 43px;  
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .cont-grid {
+        margin: 38px 10.5px 53px 10.5px;
+    }
+    .miniCont {  
+        width: 156px;
+        height: 120px;
+        margin: 0 10.5px 25px 10.5px;
+    }
+    .miniCont:hover::before{
+        opacity: 0;
+    }
+    .miniContMaxMobile{
+        position: fixed;
+        z-index: 1;  
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        background: $background-modal;
+    }
+    .imgMaxMobile{
+        position: fixed;  
+        top: 26.7%;
+        left: 7.73%;
+        width: 84.8%;
+        height: 42%;
+    }
+    .contIcons{
+        display: none;
+    }
+    .contIconsMaxMobile{
+        display: block;
+        position: fixed;
+        right: 7%;              
+        top: 71.57%;
+        width: 90px;
+        display: flex;
+    }
+    .user{
+        font-size: 0px;
+    }
+    .tituloGifo{                
+        font-size: 0px;
+    }
+    .contInfoMaxMobile{
+        position: fixed;
+        top: 71%;
+        left: 8%;
+    }
+    .userMaxMobile{
+        font-family: $fuente-roboto; 
+        font-size: 15px;
+        line-height: 18px;
+        color: $color-negro;
+    }
+    .tituloGifoMaxMobile{
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-negro;                 
+        text-align: center;
+        font-family: $fuente-montserrat;
+    }
+    .downMaxMobile{
+        margin: 5px;
+        border-radius: 6px; 
+        border: 1px solid $color-sugerencia;
+        opacity: 0.5;
+    }
+    .downMaxMobile:hover{
+        background: $color-blanco;
+    }
+    .botonContFavMaxMobile{
+        margin: 5px;
+        border-radius: 6px;
+        width: 33px;
+        height: 34px;
+        background: $color-blanco;
+        opacity: 0.7;
+        border: 1px solid $color-sugerencia;
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .maxMaxMobile{
+        display: none;        
+    }
+    .closeMobileMax{
+        position: fixed;
+        top: 11%;
+        right: 9.15%;
+        display: block;
+    }
+    .divContError {          
+        margin-top: 15px;
+    }
+    .imgError {               
+        width: 90px;
+    }
+    .textoError {
+        font-size: 16px;     
+        line-height: 24px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .searchSection{
+        .contTitulo{
+    
+            .inspirate{
+                font-size: 20px;
+                line-height: 30px;
+                margin: 7px 30px 20px 30px; 
+            }
+        }
+    
+        .contBusqueda{
+            .imagenInicio{
+                width: 253px;
+                height: 120px;
+            }
+    
+            .busqueda{
+                width: 300px;
+            }
+        }
+
+        #seccionDosTrendings{
+            margin-top: 21px; 
+        
+            .tituloTrending{
+                font-size: 15px;
+            }
+        
+            .containerTrends{
+        
+                .topicoCreado{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    //Abre la barra de búsqueda para mostrar sugerencias
+    .busquedaAbierta{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .searchSection{
+    
+        .contBusqueda{
+            .imagenInicio{
+                width: 250px;
+                height: 110px;
+            }
+    
+            .busqueda{
+                width: 270px;
+            }
+        }
+    }
+    //Abre la barra de búsqueda para mostrar sugerencias
+    .busquedaAbierta{
+        width: 270px;
+    }
+    .imgMaxMobile{               
+        left: 0px;
+        width: 250px;
+    }
+    .contInfoMaxMobile{
+        top: 540px;
+    }
+    .userMaxMobile{
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .tituloGifoMaxMobile{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .contIconsMaxMobile{
+        left: 62%;               
+    }
+}

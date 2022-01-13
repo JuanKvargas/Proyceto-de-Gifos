@@ -1,0 +1,26 @@
+.modoNoche{
+    .misGifos{
+        color: $color-blanco;
+    }
+    .miniContMisGifMax{
+        background: $negro-modal;
+    }
+    .userMisGifMax{
+        color: $color-blanco;
+    }
+    .tituloGifoMisGifMax{
+        color: $color-blanco;
+    }
+
+    @media screen and (max-width: 900px){
+        .miniContMisGifMaxMobile{ 
+            background: $negro-modal;
+        }
+        .userMisGifMaxMobile{
+            color: $color-blanco;
+        }
+        .tituloGifoMisGifMaxMobile{ 
+            color: $color-blanco;
+        }
+    }
+}

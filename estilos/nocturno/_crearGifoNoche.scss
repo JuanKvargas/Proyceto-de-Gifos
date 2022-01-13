@@ -1,0 +1,73 @@
+///// Estilos crear gifo noche////
+
+.modoNoche{
+    .crearGIFFO{
+    
+        .pantallaPrincipal{
+    
+            .pantallaCentral{
+                .pantallaGrabacion{
+                    border: 1px solid $color-blanco;
+    
+                    .grabacion{
+    
+                        .tituloRecord{
+                            color: $color-blanco;
+                        }
+    
+                        .textRecord{
+                            color: $color-blanco;
+                        }
+    
+                    }
+                }
+    
+                .contPasosYContador{
+    
+                    .pasos{
+    
+                        .paso{
+                            border: 1px solid $color-blanco;
+                            color: $color-blanco;
+                        }
+    
+                        .paso-activo{
+                            background-color: $color-blanco;
+                            color: $color-violeta;
+                        }
+    
+                        .paso:last-child {
+                            margin-right: 0;
+                        }
+                    }
+    
+                    .contador{
+    
+                        .temporizador{
+                            color: $color-blanco;
+                        }
+    
+                        .repetirCaptura{
+                            color: $color-blanco;
+                            border-bottom: 2px solid $background-slider-noche;
+                        }
+                        :hover{
+                            border-bottom: 2px solid $color-GIFOS;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+    
+    }
+    .boton{
+        color: $color-blanco;
+        border: 1px solid $color-blanco;
+    }
+    .boton:hover{
+        color: $color-violeta;
+        background: $color-blanco;
+    }
+}

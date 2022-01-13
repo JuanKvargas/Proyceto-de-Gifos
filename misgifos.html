@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Giffos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" 
+    rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c1eae85dfa.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./estilos/estilos.css">
+
+    <link rel="icon" href="/master/assets/logo-mobile.svg">
+
+</head>
+<body id="body">
+
+    <header>
+        <nav class="nav">
+            <img src="./assets/logo-desktop.svg" alt="Logo desktop Giffos" class="logoDesktop" id="logoDesktop">
+            <img src="./assets/logo-mobile.svg" alt="Logo mobile Gifos" class="logoMobile" id="logoMobile">
+            <button class="nav-toggle">
+                <img src="./assets/burger.svg" alt="btn-burguer" id="btnBurguer">
+            </button>
+            <button class="nav-toggle-close">
+                <img src="./assets/close.svg" alt="btn-burguer-close" id="btnCloseBurguer" class="btnCloseBurguer">
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-li"><a href="#" id="noche" class="nav-a">MODO NOCTURNO</a></li>
+                <li class="nav-menu-li"><a href="index.html" class="nav-a">HOME</a></li>
+                <li class="nav-menu-li"><a href="favoritos.html" class="nav-a">FAVORITOS</a></li>
+                <li class="nav-menu-li"><a href="misgifos.html" class="nav-a">MIS GIFOS</a></li>
+                <li class="nav-menu-li"><a href="creargifo.html" class="nav-a nav-crear">CREAR GIFO</a></li>
+            </ul>
+        </nav>
+        <a href="creargifo.html">
+            <img src="./assets/button-crear-gifo.svg" alt="Btn Crear Gifo" class="btn-Gifo" id="btnCrearGifo">
+            <img src="./assets/CTA-crear-gifo-modo-noc.svg" alt="Btn Crear Gifo" class="btn-Gifo" id="btnCrearGifoNoche">
+        </a>
+    </header>
+
+    <main>
+
+        <section class="misGifosInicio">
+            <img src="./assets/icon-mis-gifos.svg" alt="ícono-cara-mis-gifos" class="caraMisGifos">
+            <h1 class="misGifos">Mis GIFOS</h1>
+        </section>
+
+        <section class="misGifosVacio" id="contMisGifosVacio">
+            <img src="./assets/icon-mis-gifos-sin-contenido.svg" alt="icono-mis-gifos-sin-contenido" class="imgMisGifosVacio">
+            <h3 class="tituloMisGifosVacio">¡Anímate a crear tu primer GIFO! </h3>
+        </section>
+
+        <section id="contenedorBusquedaMisGifos" class="contenedorBusquedaMisGifos">
+
+            <div id="contGridMisGifos" class="contGridMisGifos"></div>
+
+
+            <img src="./assets/CTA-ver-mas.svg" alt="btn-ver-mas-giff-fav" class="btnVerMasFav" id="btnVerMasGif"> 
+                      
+
+        </section>
+
+        <section class="seccionCarrousel">
+            <div class="carousel">
+                <h2 class="trendGif">Trending Gifos</h2>
+                <div class="cont-mira">
+                    <h3 class="mira">Mira los últimos</h3>
+                    <h3 class="mira">GIFOS de nuestra comunidad</h3>
+                </div>
+                <div class="cont-carousel" id="cont-carousel">
+                    <div class="btnDesliza deslizaIzquierda" id="boton-Izquierda">
+                        <img src="./assets/button-slider-left-hover.svg" alt="">
+                    </div>
+                    <div class="btnDesliza deslizaIzquierda" id="boton-Izq-Normal">
+                        <img src="./assets/button-slider-left.svg" alt="">
+                    </div>
+                    <div class="fila-imagenes" id="imagenes">
+                        <!-- <div class="pasarela">
+                            <div class="miniContTrend" id="miniCont1">
+                                <img src="" alt="image" class="imagenTrend">
+                                <img src="/assets/close.svg" alt="" class="closeTrend">
+                                <div class="contIconsTrend" id="contIconsTrend1">
+                                    <img src="/assets/icon-fav.svg" alt="" class="favTrend">
+                                    <img src="/assets/icon-download.svg" alt="" class="downTrend">
+                                    <img src="/assets/icon-max-normal.svg" alt="" class="maxTrend" id="max1">
+                                </div>
+                                <div class="contInfoTrend" id="contInfoTrend1">
+                                    <h4 class="userGifo">Usuario Giff</h4>
+                                    <h3 class="titleGifo">Tipo GIF</h3>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="btnDesliza deslizaDerecha" id="boton-Derecha">
+                        <img src="./assets/Button-Slider-right-hover.svg" alt="">
+                    </div> 
+                    <div class="btnDesliza deslizaDerecha" id="boton-Derecha-normal">
+                        <img src="./assets/Button-Slider-right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="containerSociales">
+            <p class="compartir">Compartir en:</p>
+            <div class="redes">
+                <a href="https://es-la.facebook.com/" target="_blank"><img src="./assets/icon_facebook.svg" alt="Facebook" id="facebook"></a>
+                <a href="https://twitter.com/iniciarsesion?lang=es" target="_blank"><img src="./assets/icon-twitter.svg" alt="Twiter" id="twiter"></a>
+                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="./assets/icon_instagram.svg" alt="Instagram" id="instagram"></a>
+            </div>
+            <p class="derechos" id="rigths">© GIFOS 2020 All Rigths Rsesrved</p>
+        </div>
+    </footer>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="./scripts/misgifos.js"></script>
+    <script src="./scripts/animaciones.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/modoNoche.js"></script>
+    
+</body>
+</html>

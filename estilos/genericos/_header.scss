@@ -1,0 +1,154 @@
+
+////////////////////  Estilos al Header  ////////////////////
+header{
+    background: $background-header;
+    height: 95px;
+    border-top: 5px solid $color-violeta;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.logoDesktop{
+    width: 59.1px;
+    height: 59.1px;
+    margin-top: 18px;
+    margin-left: 10.833333333%;
+}
+.logoMobile{
+    display: none;
+}
+.nav-toggle,.nav-toggle-close{
+    background: none;
+    color: $color-negro-burguer;
+    border: none;
+    font-size: 30px;
+    line-height: 95px;
+    position: relative;
+    left: -1500px;
+    display: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-a{
+    text-decoration: none;
+    font-size: 13px;
+    color: $color-violeta;
+    letter-spacing: 0;
+    font-family: $fuente-montserrat;
+    font-weight: 900;
+    text-align: center;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 269.5px;
+    list-style: none;
+}
+.nav-menu-li{
+    margin: 0 40px;
+    line-height: 95px;
+    width: max-content; 
+    
+}
+.nav-a:hover{
+    border-bottom: 2px solid #5ED7C6;;
+}
+.nav-crear{
+    display: none;
+}
+.btn-Gifo{
+    float: right;
+    margin-right: 156px;
+    margin-top: -75px;
+    cursor: pointer;
+}
+#btnCrearGifoNoche{
+    display: none;
+}
+
+//Pantalla intermedia
+@media screen and (max-width: 1200px){
+    .logoDesktop{
+        width: 53.5px;
+        height: 53.5px;
+        margin-top: 25px;
+        margin-left: 8%;
+    }
+    .nav-a{
+        font-size: 14px;
+    }
+    .nav-menu-li{
+        margin: 0 30px;
+    }
+    .btn-Gifo{
+        margin-right: 106px;
+    }
+}
+//Pantalla mobile
+@media screen and (max-width: 900px){
+
+    //////////////////// Estilos query al header ////////////////////
+    header{
+        background: $color-blanco;
+    }
+    .logoDesktop{
+        display: none;
+    }
+    .logoMobile{
+        display: block;
+        width: 48.8px;
+        height: 48.8px;
+        margin-top: 29px;
+        margin-left: 22px;
+    }
+    .nav-a{
+        font-size: 15px;
+        color: $color-blanco;
+        text-align: center;
+    }
+    .nav-crear{
+        display: block;
+    }
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        background: $violeta-09;
+        position: fixed;
+        z-index: 20;
+        left: 0;
+        top: 95px;
+        width: 100%;
+        padding: 0;
+        height: 584px;
+        overflow-y: auto;
+        left: 100%;
+        transition: left .3s;
+    }
+    .btn-Gifo{
+        display: none;
+    }
+    .nav-menu-li{
+        border-bottom: 1px solid $color-blanco;
+    }
+    .nav-toggle{
+        display: block;
+        cursor: pointer;
+        left: -27px;
+    }
+    .nav-toggle-close{
+        cursor: pointer;
+        left: -27px;
+    }
+    .nav-menu_vissible{
+        left: 0;
+    } 
+    .nav-a:hover{
+        border-bottom:none;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}

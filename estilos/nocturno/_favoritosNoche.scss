@@ -1,0 +1,28 @@
+////Estilos a favoritos
+
+.modoNoche{
+    .favoritos{
+        color: $color-blanco;
+    }
+    .miniContFavMax{
+        background: $negro-modal;
+    }
+    .userFavMax{
+        color: $color-blanco;
+    }
+    .tituloGifoFavMax{
+        color: $color-blanco;
+    }
+
+    @media screen and (max-width: 900px){
+        .miniContFavMaxMobile{
+            background: $negro-modal;
+        }
+        .userFavMaxMobile{
+            color: $color-blanco;
+        }
+        .tituloGifoFavMaxMobile{
+            color: $color-blanco;
+        }
+    }
+}

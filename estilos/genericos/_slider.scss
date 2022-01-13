@@ -1,0 +1,397 @@
+//////////Section Mira los últimos Giffos  //////////
+
+
+.seccionCarrousel{
+    margin-top: 0px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+.carousel{
+    width: 100%;
+    margin-top: -95px;
+    margin-bottom: -100px;
+    background: $background-slider;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.trendGif{
+    font-family: $fuente-montserrat;
+    font-weight: bold;
+    font-size: 25px;
+    color: $color-violeta;
+    line-height: 30px;
+    padding-bottom: 24px;
+    opacity: 1;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 67px;
+    padding: 3.5px 0;
+}
+.mira{
+    margin-top: 12px;
+    font-size: 18px;
+    color: $color-negro;
+    line-height: 21px;
+    font-family: $fuente-roboto;
+}
+.cont-mira{
+    display: flex;
+    justify-content: center;
+}
+
+////////// Images //////////
+.cont-carousel{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 53px; 
+    max-width: 80vw;
+    overflow: hidden;
+    margin-bottom: 182px; 
+
+}
+.fila-imagenes{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.pasarela{
+    position: relative;
+    width: 410px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+}
+.pasarela:hover::before{
+    content: "";
+    width: 87%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    background: $violeta-hover-giff;
+}
+.pasarelaMax{
+    position: fixed;
+    z-index: 1;  
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: $background-modal;
+}
+.imagenTrend{
+    object-fit: cover;
+    height: 275px;
+    width: 357px;
+    transition: .3s ease-in-out;
+}
+.imagenTrendMax{
+    position: absolute;                
+    top: 160px;
+    left: 25%;  
+    width: 48.2639%;
+    height: 385px;
+}
+
+///////// Botones /////////////////////
+.btnDesliza{
+    border: 1px solid $color-violeta;
+    background-color: #fff;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.deslizaIzquierda{
+    left: 5.5%;
+}
+.deslizaDerecha{
+    right: 5.5%;
+}
+////////////////////LigthBox a los ultimos Gifos/////////////////////
+
+.contIconsTrend{
+    position: absolute;
+    display: flex; 
+    top: 10px;
+    right: 40px;
+    transform: translateX(-10000%);
+}
+.contIconsTrendMax{ 
+    position: fixed;
+    display: flex;
+    left: 66.18%;            
+    top: 576px;
+}
+.showIconsTrend{
+    transform: translateX(0%);
+}
+.contInfoTrend{
+    position: absolute;
+    top: 181px;                 
+    left: 35px;
+    display: none;
+}
+.contInfoTrendMax{ 
+    position: fixed;
+    top: 576px;
+    left: 24.6875%;
+}
+.userGifoTrend{
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-blanco; 
+}
+.userGifoTrendMax{ 
+    font-family: $fuente-roboto; 
+    font-size: 15px;
+    color: $color-negro;
+}
+.titleGifoTrend{
+    font-family: $fuente-roboto;
+    font-weight: bold;                  
+    font-size: 16px;
+    color: $color-blanco;
+    margin-top: 6px;
+}
+.titleGifoTrendMax{ 
+    font-size: 16px;
+    color: $color-negro;                 
+    text-align: center;
+    font-family: $fuente-roboto;
+}
+.botonContFavTrend{
+    margin: 5px;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonContFavTrend:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.botonContFavTrendMax{ 
+    margin: 5px;
+    border-radius: 6px;
+    width: 33px;
+    height: 34px;
+    background: $color-blanco;
+    opacity: 0.7;
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonContFavTrendMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.downTrend{
+    margin: 5px;
+    border-radius: 6px;
+}
+.downTrend:hover{
+    background: $color-blanco;
+}
+.downTrendMax{ 
+    margin: 5px;
+    border-radius: 6px; 
+    border: 1px solid $color-sugerencia;
+    opacity: 0.5;
+}
+.downTrendMax:hover{
+    background: $color-blanco;
+    opacity: 1;
+}
+.maxTrend{
+    margin: 5px;
+    border-radius: 6px;
+}
+.maxTrendMax{
+    display: none;        
+}
+.maxTrend:hover{
+    background: $color-blanco;
+}
+
+.closeTrend{
+    display: none;
+}
+.closeTrendMax{
+    position: fixed;
+    top: 66.4px;
+    left: 80%;
+}
+
+.closeTrendMobile{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .deslizaIzquierda{
+        left: 3.5%;
+    }
+    .deslizaDerecha{
+        right: 3.5%;
+    }
+    .imagenTrendMax{
+        left: 16%;
+        width: 66%;
+        height: 385px;
+    }
+    .contIconsTrend{
+        top: 6px;
+    }
+    .contIconsTrendMax{
+        left: 72.18%;               
+        top: 576px;
+    }
+    .contInfoTrendMax{
+        left: 16%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    
+    .btnDesliza{
+        left: -1500px; 
+    }
+    .seccionCarrousel{
+        margin-top: 45px;
+    }
+    .carousel{
+        margin-top: -270px;
+    }
+    .trendGif{
+        font-size: 20px;
+        padding-bottom: 12px;
+        margin-top: 46px;
+    }
+    .mira{
+        margin-top: 7px;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+    }
+    .cont-mira{
+        flex-direction: column;
+    }
+    
+    .cont-carousel{
+        margin-top: 32px; 
+        min-width: 100vw; 
+        overflow-x: scroll;
+        margin-bottom: 82px;
+    
+    }
+    /* .fila-imagenes{
+        border: 1px solid yellow;
+    } */
+    .pasarela{
+        width: 330px;
+        padding: 5px 40px;
+    }
+    .pasarela:hover::before{
+        display: none;
+    }
+    .pasarelaMaxMobile{
+        position: fixed;
+        z-index: 1;  
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        background: $background-modal;
+    }
+    .imagenTrend{
+        height: 187px;
+        width: 243px;
+    }
+    .imagenTrendMaxMobile{
+        position: fixed;              
+        top: 26.7%;
+        left: 7.73%;
+        width: 84.8%;
+        height: 41.95%;
+    }
+    
+    ////////////////////LigthBox a los ultimos Gifos/////////////////////
+    .contIconsTrend{
+        transform: translateX(0%);
+        top: 0px;
+        left: 0px;
+    }
+    .contIconsTrendMaxMobile{
+        position: fixed;
+        display: flex;
+        top: 71.6%;
+        right: 7.73%;
+    }
+    .contInfoTrend{
+        display: none;
+    }
+    .contInfoTrendMaxMobile{ 
+        position: fixed;
+        top: 71%; 
+        left: 7.73%;
+    }
+    .userGifoTrend{
+        display: none; 
+    }
+    .userGifoTrendMaxMobile{
+        font-family: $fuente-roboto; 
+        font-size: 15px;
+        color: $color-negro;
+    }
+    .titleGifoTrend{
+        display: none;
+    }
+    .titleGifoTrendMaxMobile{
+        font-size: 16px;
+        color: $color-negro;                 
+        text-align: center;
+        font-family: $fuente-montserrat;
+    }
+    .botonContFavTrend{
+        display: none;
+    }
+    .downTrend{
+        display: none;
+    }
+    .maxTrend{
+        margin: 2.5px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    .maxTrendMaxMobile{
+        display: none;
+    }
+    .closeTrendMaxMobile{
+        position: fixed;
+        top: 10.1%;
+        right: 9.15%;
+    }
+}
